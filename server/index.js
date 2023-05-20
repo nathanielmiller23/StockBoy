@@ -6,8 +6,8 @@ app.use(cors());
 
 app.get('/stocks/:symbol', async (req, res) => {
   const { symbol } = req.params;
-  const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=Y5X6GF9E7MXX8YZY`);
-  //https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&apikey=Y5X6GF9E7MXX8YZY
+  const response = await axios.get(`https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${symbol}&apikey=demo`);
+  //https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=IBM&apikey=demo
   
   res.send(response.data);
 });
